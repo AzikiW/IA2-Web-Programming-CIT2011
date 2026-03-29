@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Homemade Bracelets by Ziks</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Homemade Bracelets <span>by Ziks</span></h1>
+            <p>Handcrafted with love, designed for you</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"> Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about-us.html"> About Us</a></li>
+                <li><a href="cart.html"><Cart (<span id="cartCount">0</span>)</a></li>
+                <li><a href="login.html"> Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main style="padding: 2rem 5%; max-width: 1200px; margin: 0 auto;">
+        <h2 style="margin-bottom: 1.5rem; border-left: 4px solid #D4AF37; padding-left: 1rem;">
+             Checkout
+        </h2>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                        <div class="checkout-summary" id="checkoutSummary" style="background: #f9f9f9; padding: 1.5rem; border-radius: 12px;">
+                <div style="text-align: center;">Loading order summary...</div>
+            </div>
+            
+                 <div class="form-container" style="margin: 0;">
+                <h3> Shipping Details</h3>
+                <form id="checkoutForm" onsubmit="return processCheckout(event)">
+                    <div class="form-group">
+                        <label> Full Name:</label>
+                        <input type="text" id="shipName" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label> Shipping Address:</label>
+                        <input type="text" id="shipAddress" required placeholder="Street, City, Parish">
+                    </div>
+                    <div class="form-group">
+                        <label> Phone Number:</label>
+                        <input type="tel" id="shipPhone" placeholder="(876) 123-4567">
+                    </div>
+                    <div class="form-group">
+                        <label> Amount Paying (JMD):</label>
+                        <input type="number" id="payAmount" step="0.01" readonly style="background: #f5f5f5;">
+                    </div>
+                    
+                    <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                        <button type="button" onclick="window.location.href='cart.html'" class="btn btn-secondary">Back to Cart</button>
+                        <button type="submit" class="btn">Confirm Order</button>
+                        <button type="button" onclick="window.location.href='products.html'" class="btn btn-secondary">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 Homemade Bracelets by Ziks | Created by Aziki Woolcock (2301230)</p>
+    </footer>
+    
+    <script src="../style/script.js"></script>
+</body>
+</html>
